@@ -1,0 +1,297 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: sans-serif;
+  background: rgb(255, 247, 246);
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  padding-top: 60px;
+  height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+h1 {
+  position: relative;
+  color: purple;
+  border-bottom: 4px solid rgb(231, 231, 231);
+  padding: 10px 0;
+  /* width: 100%; */
+}
+
+/* header {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+} */
+
+h1:hover {
+  color: rgb(155, 155, 155);
+}
+
+h1::before {
+  position: absolute;
+  content: "";
+  background: linear-gradient(to left, purple, transparent);
+  width: 340px;
+  /* border-radius: 10px; */
+  height: 5px;
+  bottom: -4px;
+  transform: translateX(0);
+}
+
+h1:hover::before {
+  transition: 0.2s;
+  transform: translateX(520%);
+}
+
+main {
+  display: flex;
+}
+
+/* ---------------------------------------
+* TABLE - Basis
+* ---------------------------------------- */
+
+table {
+  flex: 1;
+}
+
+tr {
+  display: flex;
+  align-items: center;
+}
+
+td {
+  flex: 1;
+  height: 100%;
+  padding: 16px 16px;
+}
+
+td:first-child {
+  flex: 0.7;
+}
+
+td:nth-child(5) {
+  flex: 1.6;
+}
+
+td:nth-child(6) {
+  flex: 2;
+}
+
+td:nth-child(7) {
+  flex: 3;
+}
+
+td:last-child {
+  flex: 0.5;
+}
+
+/* ---------------------------------------
+* T-HEAD - double row
+* ---------------------------------------- */
+
+/* thead tr {
+    border-bottom: 1px solid red;
+} */
+
+/* ---------------------------------------
+* TABLE - Contents
+* ---------------------------------------- */
+
+tbody tr td:first-child {
+  background: url(/images/cross-icon.svg) center center no-repeat;
+  transform: rotate(45deg);
+  transition: 0.4s;
+}
+
+tbody tr td:hover:first-child {
+  transform: rotate(270deg) scale(1.4);
+}
+
+tbody tr td:last-child {
+  position: relative;
+  background: url(/images/three-dots-menu.svg) center center no-repeat;
+  transform: rotate(0deg);
+  transition: 0.4s;
+  /* transition-timing-function: cubic-bezier(0.17, 0.67, 0.09, 1.09); */
+  /* background-size: contain; */
+}
+
+tbody tr td:hover:last-child {
+  transform: rotate(15deg);
+  z-index: 9;
+}
+
+tbody tr td:nth-child(2) img {
+  border: 4px solid rgb(235, 235, 235);
+  border-radius: 50%;
+  justify-content: center;
+}
+
+img {
+  width: 60px;
+}
+
+tr {
+  transition: 0.2s;
+}
+
+tbody tr:hover {
+  background: white;
+  box-shadow: 0 4px 14px rgba(121, 121, 121, 0.3);
+  border-radius: 5px;
+  /* transform: scale(1.1); */
+}
+
+tbody td:nth-child(5),
+tbody td:nth-child(6) {
+  text-align: right;
+}
+
+.emo {
+  width: 36px;
+}
+
+/* .td-child {
+} */
+
+p {
+  display: inline-block;
+}
+
+tbody td:nth-child(7) {
+  display: flex;
+  align-items: center;
+}
+
+span {
+  padding: 0 6px;
+}
+
+/* ---------------------------------------
+* DROP-DOWN MENU    
+* ---------------------------------------- */
+
+tbody tr td:last-child {
+  height: 96px;
+}
+
+tbody tr td:last-child ul {
+  padding-inline-start: 0;
+  position: absolute;
+  background: rgb(255, 255, 255);
+  list-style: none;
+  border-radius: 6px;
+  top: 82px;
+  left: -126px;
+  width: 200px;
+  /* height: 100%; */
+  box-shadow: 0 6px 14px rgba(121, 121, 121, 0.65);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-60px);
+  transition: 0.2s;
+}
+
+li {
+  padding: 14px;
+  /* z-index: 999; */
+}
+
+li:hover {
+  background: rgb(245, 245, 245);
+}
+
+/* tr {
+  border: 1px solid red;
+  z-index: -1;
+} */
+
+/* tbody tr td:hover:last-child {
+  opacity: 1;
+  visibility: visible;
+} */
+
+tbody tr td:hover:last-child ul {
+  transform: translateY(-6px);
+  opacity: 1;
+  visibility: visible;
+  z-index: 999;
+}
+
+/* ---------------------------------------
+* STICKY 
+* ---------------------------------------- */
+
+thead tr {
+  position: sticky;
+  top: 0;
+  background: rgb(255, 247, 246);
+  z-index: 99999;
+  padding: 20px;
+}
+
+/* ---------------------------------------
+* MEDIA QUERY
+* ---------------------------------------- */
+/* 
+@media (max-width: 1250px) {
+  tbody tr 
+} */
+
+/* ---------------------------------------
+* EXPERIMENT! - with js, click event, counter and random number...
+* ---------------------------------------- */
+
+tbody tr td:active:first-child {
+  transform: scale(0.8);
+}
+
+.style-transaction {
+  font-size: 1.6rem;
+  color: hotpink;
+}
+
+.default-smiley {
+  /* background: url("/images/81-100-happy.png") center center no-repeat;
+  background-size: cover; */
+  width: 50px;
+  height: 50px;
+  padding: 0 30px;
+}
+
+.smiley-100 {
+  background: url("/images/81-100-happy.png") center left no-repeat;
+  background-size: contain;
+}
+
+.smiley-80 {
+  background: url("/images/61-80-happy.png") center left no-repeat;
+  background-size: contain;
+}
+
+.smiley-60 {
+  background: url("/images/41-60-happy.png") center left no-repeat;
+  background-size: contain;
+}
+
+.smiley-40 {
+  background: url("/images/21-40-happy.png") center left no-repeat;
+  background-size: contain;
+}
+
+.smiley-20 {
+  background: url("/images/0-20-happy.png") center center no-repeat;
+  background-size: contain;
+}
