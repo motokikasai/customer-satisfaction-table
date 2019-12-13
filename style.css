@@ -110,7 +110,7 @@ td:last-child {
 * ---------------------------------------- */
 
 tbody tr td:first-child {
-  background: url(./images/cross-icon.svg) center center no-repeat;
+  background: url("./images/cross-icon.svg") center center no-repeat;
   transform: rotate(45deg);
   transition: 0.4s;
 }
@@ -121,7 +121,7 @@ tbody tr td:hover:first-child {
 
 tbody tr td:last-child {
   position: relative;
-  background: url(./images/three-dots-menu.svg) center center no-repeat;
+  background: url("./images/three-dots-menu.svg") center center no-repeat;
   transform: rotate(0deg);
   transition: 0.4s;
   /* transition-timing-function: cubic-bezier(0.17, 0.67, 0.09, 1.09); */
