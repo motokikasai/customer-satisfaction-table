@@ -110,7 +110,7 @@ td:last-child {
 * ---------------------------------------- */
 
 tbody tr td:first-child {
-  background: url(/images/cross-icon.svg) center center no-repeat;
+  background: url(./images/cross-icon.svg) center center no-repeat;
   transform: rotate(45deg);
   transition: 0.4s;
 }
@@ -121,7 +121,7 @@ tbody tr td:hover:first-child {
 
 tbody tr td:last-child {
   position: relative;
-  background: url(/images/three-dots-menu.svg) center center no-repeat;
+  background: url(./images/three-dots-menu.svg) center center no-repeat;
   transform: rotate(0deg);
   transition: 0.4s;
   /* transition-timing-function: cubic-bezier(0.17, 0.67, 0.09, 1.09); */
@@ -272,26 +272,26 @@ tbody tr td:active:first-child {
 }
 
 .smiley-100 {
-  background: url("/images/81-100-happy.png") center left no-repeat;
+  background: url("./images/81-100-happy.png") center left no-repeat;
   background-size: contain;
 }
 
 .smiley-80 {
-  background: url("/images/61-80-happy.png") center left no-repeat;
+  background: url("./images/61-80-happy.png") center left no-repeat;
   background-size: contain;
 }
 
 .smiley-60 {
-  background: url("/images/41-60-happy.png") center left no-repeat;
+  background: url("./images/41-60-happy.png") center left no-repeat;
   background-size: contain;
 }
 
 .smiley-40 {
-  background: url("/images/21-40-happy.png") center left no-repeat;
+  background: url("./images/21-40-happy.png") center left no-repeat;
   background-size: contain;
 }
 
 .smiley-20 {
-  background: url("/images/0-20-happy.png") center center no-repeat;
+  background: url("./images/0-20-happy.png") center center no-repeat;
   background-size: contain;
 }
